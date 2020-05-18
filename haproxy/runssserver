@@ -1,0 +1,21 @@
+#!/bin/bash
+export PATH=/usr/local/bin/:/usr/bin:/bin:$PATH
+CUR_PATH=`pwd`
+basepath=$(cd `dirname $0`; pwd)
+echo $CUR_PATH
+echo $basepath
+cd $basepath
+
+#ss server start tool
+
+if [[ $1 ]]; then
+    LOG=`nohup /home/ubuntu/.local/bin/ssserver -c ${1} &> /dev/null & echo $!`
+else
+    LOG=`nohup /home/ubuntu/.local/bin/ssserver -c /home/ubuntu/shadowsocks/config.json &> /dev/null & echo $!`
+fi
+# LOG=`nohup python klinetool.py > log.txt 2>&1 & echo $!`
+# # LOG="12345"
+echo $LOG
+OUTSTR=$LOG
+echo $OUTSTR > ${basepath}/ss_psid.txt
+echo 'sserver start'
