@@ -92,6 +92,8 @@ https://github.com/fengmm521/shadowsocks-ios（在这里也可以找到mac os,li
 
 先打开shadowsocks的app，这个app在app store上是下载不下来的，你要用我上边的源码用xcode去编译安装到你的ios设备上.然后像下边这样在wifi网络设置的代里。
 
+![](https://raw.githubusercontent.com/fengmm521/nettool/master/other/img.png)
+
 输入的内容是:http://127.0.0.1:8090/proxy.pac
  这个可以一直都设置上，不使用代理也不用改。这样以后想要代码上网，只打开shadowsocks就可以了。
 
